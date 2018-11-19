@@ -24,14 +24,14 @@ public class Endereco implements Serializable {
 	private String complemento;
 	private String bairro;
 	private String cep;
-	
+
 	@JsonBackReference
 	@ManyToOne
-	@JoinColumn(name="cliente_id")
+	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
-	
+
 	@ManyToOne
-	@JoinColumn(name="cidade_id")
+	@JoinColumn(name = "cidade_id")
 	private Cidade cidade;
 
 	public Endereco() {
@@ -139,9 +139,5 @@ public class Endereco implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
 
 }
